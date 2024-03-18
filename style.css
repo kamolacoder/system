@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+span, a, label {
+    display: inline-block;
+}
+*::after,*::before{
+    box-sizing: border-box;
+}
+.big{
+position: relative;
+    height: 700px;
+    background-image: url("stars.png"), linear-gradient(black,black);
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+ 
+}
+.div11{
+width: 100px;
+height: 100px;
+background-color:orangered;
+border-radius: 50%;
+position: absolute;
+box-shadow: 0 0 10px 10px red;
+align-items: center;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+.div1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 3px solid orangered;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    inset: 0;
+    margin: auto ;
+}
+.div13{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(27, 106, 167);
+    box-shadow: 0 0 10px 10px rgb(29, 87, 163);
+    animation: oy 6s linear infinite ;
+    position: absolute;
+    left: 30%;
+    top: 30%;
+}
+.div12{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgb(116, 185, 237);
+    box-shadow: inset 0 -5px 5px -2px orange;
+    position: relative;
+    animation: yer 10s linear infinite ;
+}
+@keyframes yer{
+    0%{
+        transform: rotate(0)translate(150px);
+    }
+    100%{
+        transform: rotate(360deg)translate(150px);
+    }
+}
+@keyframes oy{
+    0%{
+        transform: rotate(0)translate(70px)rotate(0)rotate(0);
+    }
+    100%{
+        transform: rotate(360deg)translate(70px)rotate(-360deg)rotate(360deg);
+    }
+}
+@media(max-width:400px){
+    .div1{
+        width: 200px;
+        height: 200px;
+    }
+    .div11{
+        width: 70px;
+        height: 70px;
+    }
+    @keyframes yer{
+        0%{
+            transform: rotate(0)translate(100px);
+        }
+        100%{
+            transform: rotate(360deg)translate(100px);
+        }
+    }
+    @keyframes oy{
+        0%{
+            transform: rotate(0)translate(50px)rotate(0)rotate(0);
+        }
+        100%{
+            transform: rotate(360deg)translate(50px)rotate(-360deg)rotate(360deg);
+        }
+    }
+    .div12{
+        width: 50px;
+        height: 50px;
+    }
+    .div13{
+        width: 20px;
+        height: 20px;
+    }
+}
